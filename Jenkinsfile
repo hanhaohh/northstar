@@ -28,7 +28,7 @@ node {
     }
     
     stage('Trigger ManifestUpdate') {
-                echo "triggering updatemanifestjob"
-                build job: 'updatemanifest', parameters: [string(name: 'DOCKERTAG', value: env.BUILD_NUMBER)]
+                echo "triggering update_manifest"
+                build job: 'update_manifest', parameters: [string(name: 'DOCKERTAG', value: env.BUILD_NUMBER)]
         }
 }
